@@ -1,0 +1,173 @@
+/********************************
+* Default Styles - Mobile First
+********************************/	
+ 
+body{
+background-image: url(/images/site/background.jpg);
+background-size: cover;
+width:100%;
+
+font-family: arial, helvetica, sans-serif;
+font-size: 12px;
+}
+
+
+ .content {
+	 
+	 padding: 0px 60px 20px 60px;
+ }
+ 
+ .main-page {
+    background-color: white;
+	background-repeat: no-repeat;
+	
+   
+    
+ }
+ 
+ 
+ 
+ .page-header{
+	
+	background-size:70px;
+	padding-top: 5px;
+	padding: 10px 30px 0px 30px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: white;
+	
+	
+   
+    
+ }
+ /*
+ .folder{
+	background-image: url(/images/site/account.gif);
+	background-size:70px;
+	padding-top: 5px;
+	padding: 0px 0px 40px 40px;
+    background-repeat: no-repeat;
+    background-position:right top;
+    background-color: white;
+    
+ }
+ */
+
+
+
+
+
+.teste{
+	
+	color: black;
+	
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	font-family:"Comic Sans MS", cursive, sans-serif;
+font-size: 15px;
+color: #000000;
+	
+    
+}
+
+
+
+.menu ul {
+    padding:0px;
+    margin:0px;
+    background-color:#e61919;
+    list-style:none;
+}
+
+.menu ul li { 
+	display: inline; 
+
+}
+ 
+ 
+ .menu ul li a {
+    padding: 15px 40px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 20px;
+	display: inline-block;
+	color: white;
+    text-decoration: none;
+    border-bottom:2px solid e61919;
+	
+}
+
+.menu ul li a:hover {
+    background-color:white;
+    color: red;
+    border-bottom:2px solid #EA0000;
+}
+
+.menu ul h1{
+font-family:"Comic Sans MS", cursive, sans-serif;
+font-size: 35px;
+color: #000000;
+background-color:white;
+padding: 0px 0px 0px 0px;
+}
+	
+	
+ 
+ .page-nav{
+	 
+	background-image: url(/images/site/rocketfeature.jpg);
+	height: 480px;
+	background-size:cover;
+	background-repeat: no-repeat;
+	font-size: 20px;
+	font-family:"Comic Sans MS", cursive, sans-serif;
+	color: #e61919;
+	padding-left: 70%;
+	background-position-x: center, center;
+    background-position-y: center, center;
+	
+    }
+
+	
+	.text1{
+	 
+	padding-top: 20%;
+	
+    }
+	
+	
+	
+	.main h2{
+		
+		text-align: center;
+		
+	}
+	
+	 
+ .main li{
+	 
+	 font-family:"Comic Sans MS", cursive, sans-serif;
+	color: #e61919;
+	font-size: 15px;
+ }
+ 
+ 
+ 
+	 
+	 div.box {
+	width: 150px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 8px;
+	grid-template-rows: 1fr 1fr;
+	
+}
+	 
+ 
+	 
+footer {
+    background-color: white;
+    text-align: center;
+    padding: .5rem;
+}
