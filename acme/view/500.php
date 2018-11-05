@@ -35,7 +35,7 @@
 						
 				
 				
-				<footer class="page-footer">
+				<footer class="footer">
 							<?php include '../common/footer.php'; ?>
 
 				</footer>

@@ -9,13 +9,13 @@
  require_once '../model/acme-model.php';
  // get the accounts model
  require_once '../model/accounts-model.php';
+ // Get the functions library
+ require_once '../library/functions.php';
 
 // Get the array of categories
 	$categories = getCategories();
-	//var_dump($categories);
-	//exit;
 	
-	// Build a navigation bar using the $categories array
+// Build a navigation bar using the $categories array
  $navListLogin = '<ul>';
  $navListLogin .= "<li><a href='/acme/index.php' title='View the Acme home page'>Home</a></li>";
  foreach ($categories as $category) {
@@ -48,21 +48,26 @@ $action = filter_input(INPUT_POST, 'action');
     
      
  // Filter and store the data
-$clientFirstname = filter_input(INPUT_POST, 'clientFirstname');
-$clientLastname = filter_input(INPUT_POST, 'clientLastname');
-$clientEmail = filter_input(INPUT_POST, 'clientEmail');
-$clientPassword = filter_input(INPUT_POST, 'clientPassword');
+$clientFirstname = filter_input(INPUT_POST, 'clientFirstname',FILTER_SANITIZE_STRING);
+$clientLastname = filter_input(INPUT_POST, 'clientLastname',FILTER_SANITIZE_STRING);
+$clientEmail = filter_input(INPUT_POST, 'clientEmail',FILTER_SANITIZE_EMAIL);
+$clientPassword = filter_input(INPUT_POST, 'clientPassword',FILTER_SANITIZE_STRING);
+
+$clientEmail = checkEmail($clientEmail);
+$checkPassword = checkPassword($clientPassword);
 
 
 // Check for missing data
-if(empty($clientFirstname) || empty($clientLastname) || empty($clientEmail) || empty($clientPassword)){
+if(empty($clientFirstname) || empty($clientLastname) || empty($clientEmail) || empty($checkPassword)){
  $message = '<p>Please provide information for all empty form fields.</p>';
  include '../view/register.php';
  exit; 
 }
  
- // Send the data to the model
-$regOutcome = regClient($clientFirstname, $clientLastname, $clientEmail, $clientPassword);
+// Hash the checked password
+$hashedPassword = password_hash($clientPassword, PASSWORD_DEFAULT); 
+// Send the data to the model
+$regOutcome = regClient($clientFirstname, $clientLastname, $clientEmail, $hashedPassword);
 
 // Check and report the result
 if($regOutcome === 1){
@@ -74,6 +79,37 @@ if($regOutcome === 1){
  include '../view/register.php';
  exit;
 }
+ break;
+ 
+ case 'Login2':
+     
+     // Filter and store the data
+$clientEmail = filter_input(INPUT_POST, 'clientEmail',FILTER_SANITIZE_EMAIL);
+$clientPassword = filter_input(INPUT_POST, 'clientPassword',FILTER_SANITIZE_STRING);
+
+$clientEmail = checkEmail($clientEmail);
+$checkPassword = checkPassword($clientPassword);
+
+// Check for missing data
+if(empty($clientEmail) || empty($checkPassword)){
+ $message = '<p>Please provide information for all empty form fields.</p>';
+ include '../view/login.php';
+ exit; 
+}
+
+// Send the data to the model
+//$regOutcome2 = regClient($clientEmail, $clientPassword);
+
+//if($regOutcome2 === 1){
+// $message = "<p>Thanks  $clientFirstname. Welcome.</p>";
+// include '../view/login.php';
+ //exit;
+//} else {
+ //$message = "<p>Sorry $clientFirstname, but something is wrong. Please try again.</p>";
+ //include '../view/login.php';
+// exit;
+//}
+          
  break;
  
 }

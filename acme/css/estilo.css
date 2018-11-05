@@ -3,179 +3,142 @@
 ********************************/	
  
 body{
-background-image: url(/acme/images/site/background.jpg);
-background-size: cover;
-width:100%;
-
-font-family: arial, helvetica, sans-serif;
-font-size: 12px;
+    background-image: url(/acme/images/site/background.jpg);
+    background-size: cover;
+    width:100%;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 12px;
 }
 
-
- .content {
-	 
-	 padding: 0px 60px 20px 60px;
+.content{
+    padding: 0px 60px 20px 60px;
  }
  
- .main-page {
+ .main-page{
     background-color: white;
-	background-repeat: no-repeat;
-	
-   
-    
- }
- 
+    background-repeat: no-repeat;
+}
  
  
  .page-header{
-	
-	background-size:70px;
-	padding-top: 5px;
-	padding: 10px 30px 0px 30px;
+    background-size:70px;
+    padding-top: 5px;
+    padding: 10px 30px 0px 30px;
     background-repeat: no-repeat;
     background-position: right;
     background-color: white;
-	
-	
-   
-    
- }
- /*
- .folder{
-	background-image: url(/images/site/account.gif);
-	background-size:70px;
-	padding-top: 5px;
-	padding: 0px 0px 40px 40px;
-    background-repeat: no-repeat;
-    background-position:right top;
-    background-color: white;
-    
- }
- */
-
-
-
- .teste{
-	
-	color: black;
-	
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-between;
-	align-items: flex-start;
-	font-family:"Comic Sans MS", cursive, sans-serif;
-font-size: 15px;
-color: #000000;
-	
-    
+}
+ 
+.teste{
+    color: black;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 15px;
+    color: #000000;
 }
 
 .menu h1{
-font-family:"Comic Sans MS", cursive, sans-serif;
-font-size: 35px;
-color: #000000;
-background-color:white;
-padding: 0px 0px 0px 0px;
-list-style:none;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 35px;
+    color: #000000;
+    background-color:white;
+    padding: 0px 0px 0px 0px;
+    list-style:none;
 }
 
-.menu ul {
+.menu label{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 35px;
+    color: #000000;
+    background-color:white;
+    padding: 0px 0px 0px 0px;
+    list-style:none;
+}
+
+.menu h2{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    color: #000000;
+    background-color:white;
+    padding: 0px 0px 0px 0px;
+    list-style:none;
+}
+
+.menu ul{
     padding:0px;
     margin:0px;
     background-color:#e61919;
     list-style:none;
 }
 
-.menu ul li { 
-	display: inline; 
-
+.menu ul li{ 
+    display: inline; 
 }
  
- 
- .menu ul li a {
+.menu ul li a{
     padding: 15px 40px;
     font-family: "Comic Sans MS", cursive, sans-serif;
-	font-size: 20px;
-	display: inline-block;
-	color: white;
+    font-size: 20px;
+    display: inline-block;
+    color: white;
     text-decoration: none;
-    border-bottom:2px solid e61919;
-	
+    border-bottom:2px solid #E61919;
 }
 
-.menu ul li a:hover {
+.menu ul li a:hover{
     background-color:white;
     color: red;
     border-bottom:2px solid #EA0000;
 }
 
 .menu ul h1{
-font-family:"Comic Sans MS", cursive, sans-serif;
-font-size: 35px;
-color: #000000;
-background-color:white;
-padding: 0px 0px 0px 0px;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 35px;
+    color: #000000;
+    background-color:white;
+    padding: 0px 0px 0px 0px;
 }
 
-
-	
-	
- 
- .page-nav{
-	 
-	background-image: url(/acme/images/site/rocketfeature.jpg);
-	height: 480px;
-	background-size:cover;
-	background-repeat: no-repeat;
-	font-size: 20px;
-	font-family:"Comic Sans MS", cursive, sans-serif;
-	color: #e61919;
-	padding-left: 70%;
-	background-position-x: center, center;
+.page-nav{
+    background-image: url(/acme/images/site/rocketfeature.jpg);
+    height: 480px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    font-size: 20px;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    color: #e61919;
+    padding-left: 70%;
+    background-position-x: center, center;
     background-position-y: center, center;
+}
 	
-    }
-
+.text1{
+    padding-top: 20%;
+}
 	
-	.text1{
-	 
-	padding-top: 20%;
+.main h2{
+    text-align: center;
+}
 	
-    }
-	
-	
-	
-	.main h2{
-		
-		text-align: center;
-		
-	}
-	
-	 
- .main li{
-	 
-	 font-family:"Comic Sans MS", cursive, sans-serif;
-	color: #e61919;
-	font-size: 15px;
- }
+.main li{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    color: #e61919;
+    font-size: 15px;
+}
  
- 
- 
+div.box{
+    width: 150px;
+    display: grid;
+   }
 	 
-	 div.box {
-	width: 150px;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-column-gap: 8px;
-	grid-template-rows: 1fr 1fr;
-	
+#line {
+    border-bottom: solid 2px #000;
 }
 	 
- #line {
-border-bottom: solid 2px #000;
-}
-	 
-footer {
+.footer{
     background-color: white;
     text-align: center;
     padding: .5rem;
@@ -183,56 +146,136 @@ footer {
 
 
 
-.textBox p {
-font-family:"Comic Sans MS", cursive, sans-serif;
-font-size: 25px;
-color: black;
-background-color:white;
-margin:2px;
-padding: 10px 10px 0px 20px;
-list-style:none;
+.textBox p{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    color: black;
+    background-color:white;
+    margin:2px;
+    padding: 10px 10px 0px 20px;
+    list-style:none;
 }
 
-.textBox input {
-font-family:"Comic Sans MS", cursive, sans-serif;
-font-size: 25px;
-color: black;
-background-color:white;
-padding: 10px 0px 0px 0px;
-margin-left: 20px;
+.textBox input{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    color: black;
+    background-color:white;
+    padding: 10px 0px 0px 0px;
+    margin-left: 20px;
 }
 
 .textBox ul input{
-font-family:"Comic Sans MS", cursive, sans-serif;
-font-size: 35px;
-color: white;
-background-color:red;
-padding: 10px 10px 0px 20px;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 35px;
+    color: white;
+    background-color:red;
+    padding: 10px 10px 0px 20px;
 }
 
-.links p {
-font-family:"Comic Sans MS", cursive, sans-serif;
-font-size: 25px;
-color: black;
-background-color:white;
-margin:2px;
-padding: 10px 10px 0px 20px;
-list-style:none;
+.textBox label input{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 35px;
+    color: white;
+    background-color:red;
+    padding: 10px 10px 0px 20px;
+}
+
+.links p{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    color: black;
+    background-color:white;
+    margin:2px;
+    padding: 10px 10px 0px 20px;
+    list-style:none;
 }
 
 .links input {
-font-family:"Comic Sans MS", cursive, sans-serif;
-font-size: 25px;
-color: black;
-background-color:white;
-padding: 10px 0px 0px 0px;
-margin-left: 20px;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    color: black;
+    background-color:white;
+    padding: 10px 0px 0px 0px;
+    margin-left: 20px;
 }
 
 .links ul input{
-font-family:"Comic Sans MS", cursive, sans-serif;
-font-size: 35px;
-color: white;
-background-color:red;
-padding: 10px 10px 0px 20px;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 35px;
+    color: white;
+    background-color:red;
+    padding: 10px 10px 0px 20px;
+}
+
+.botoes p{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    color: black;
+    background-color:white;
+    margin:2px;
+    padding: 10px 10px 0px 20px;
+    list-style:none;
+}
+
+.botoes input {
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    color: white;
+    background-color:red;
+    padding: 10px 0px 0px 0px;
+    margin-left: 20px;
+}
+
+.gap input{ 
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    color: black;
+    background-color:white;
+    padding: 10px 10px 0px 20px;
+}
+
+.gap2 input{ 
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    color: white;
+    background-color:red;
+    padding: 10px 10px 0px 20px;
+}
+.gap2 a{ 
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    color: white;
+    background-color:red;
+    padding: 10px 10px 0px 20px;
+}
+
+.label{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    color: black;
+    background-color:white;
+    padding: 10px 10px 0px 20px;
+}
+
+
+.login {
+    width: 250px;
+    height: 50px;
+    background-color: red;
+    margin: 0 15px;
+    border: 1px solid black;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    line-height: 1.5em;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.loops{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    color: red;
+    font-size: 18px;
 }

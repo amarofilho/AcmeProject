@@ -7,11 +7,9 @@
  require_once 'model/acme-model.php';
 
 // Get the array of categories
-	$categories = getCategories();
-	//var_dump($categories);
-	//exit;
-	
-	// Build a navigation bar using the $categories array
+$categories = getCategories();
+		
+// Build a navigation bar using the $categories array
  $navList = '<ul>';
  $navList .= "<li><a href='/acme/index.php' title='View the Acme home page'>Home</a></li>";
  foreach ($categories as $category) {
@@ -19,9 +17,6 @@
  }
  $navList .= '</ul>';
  
-//echo $navList;
-//exit;
-
 $action = filter_input(INPUT_POST, 'action');
  if ($action == NULL){
   $action = filter_input(INPUT_GET, 'action');
