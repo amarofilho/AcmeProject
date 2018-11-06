@@ -28,6 +28,11 @@ body{
     background-position: right;
     background-color: white;
 }
+
+.folder span{
+    margin-right: 18px;
+    color: red;
+ }
  
 .teste{
     color: black;

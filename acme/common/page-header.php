@@ -8,6 +8,10 @@
     </div>
 			
     <div class="folder">
+        <!-- Inserindo nome de usuário na tela !-->
+        <?php if(isset($cookieFirstname)){
+        echo "<span>Welcome $cookieFirstname</span>";
+       } ?>
 			
         <a href="/acme/accounts/index.php?action=login"><img src= " /acme/images/site/account.gif" alt="folder" width= "60" height= "40"/></a>
 	My Account

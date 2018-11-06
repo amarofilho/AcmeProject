@@ -22,6 +22,10 @@ $action = filter_input(INPUT_POST, 'action');
   $action = filter_input(INPUT_GET, 'action');
  }
  
+ // Check if the firstname cookie exists, get its value week8
+if(isset($_COOKIE['firstname'])){
+ $cookieFirstname = filter_input(INPUT_COOKIE, 'firstname', FILTER_SANITIZE_STRING);
+}
   
  switch ($action){
  case 'home':
