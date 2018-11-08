@@ -1,7 +1,8 @@
     <?php
  //This is the products Controller
 
-
+// Creator acess a Session
+session_start();
 
 // Get the database connection file
  require_once '../library/connections.php';
@@ -22,16 +23,6 @@ $categories = getCategories();
   $navList .= "<li><a href='/acme/index.php?action=".urlencode($category['categoryName'])."' title='View our $category[categoryName] product line'>$category[categoryName]</a></li>";
  }
  $navList .= '</ul>';
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
  
  
 // //Build the catList using the $categories array

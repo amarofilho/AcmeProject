@@ -61,8 +61,8 @@
                      <p>Password:</p>
                      <label for="clientPassword"></label>
                      <input type="password" name="clientPassword" id="clientPassword" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
-
-                     <span>Passwords must be at least 8 characters and contain at least 1 number, 1 
+                     <br>
+                     <span class="password">Passwords must be at least 8 characters and contain at least 1 number, 1 
                         capital letter and 1 special character</span> 
                      <br>
                      <label><input type="submit" value="Register" name="botao" /></label>

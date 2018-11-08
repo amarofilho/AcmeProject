@@ -27,8 +27,9 @@
 						
 		<main class="textBox">
                     <?php
-                    if (isset($message)) {
-                    echo $message;}
+                    if (isset($_SESSION['message'])) {
+                    echo $_SESSION['message'];
+                    }
                     ?>
                                         
                     <form action="/acme/accounts/index.php" method="post">
@@ -41,8 +42,8 @@
                     <p>Password:</p>
                     <label  for="clientPassword"></label>
                     <input type="password" name="clientPassword" id="clientPassword" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
-
-                    <span>Passwords must be at least 8 characters and contain at least 1 number, 1 
+                    <br>
+                    <span class="password">Passwords must be at least 8 characters and contain at least 1 number, 1 
                                     capital letter and 1 special character!</span> 
                                  
                                  

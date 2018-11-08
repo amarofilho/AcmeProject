@@ -25,13 +25,13 @@
 									
 				<nav class="menu">
 						<?php echo $navList;?>
-                                    <label>Product Management</label>
+                                    <h1>Product Management</h1>
                                     <h2> Welcome to the product mamagement page. Please choose an option below:</h2>
                                         
                                 </nav>	
                         
-                                        <h1><a href="/acme/products/index.php?action=new-cat">Add New category </a></h1>
-                                        <h1><a href="/acme/products/index.php?action=new-prod">Add new Product </a></h1>
+                                        <h1 class="prodManagment"><a href="/acme/products/index.php?action=new-cat">Add New category </a></h1>
+                                        <h1 class="prodManagment"><a href="/acme/products/index.php?action=new-prod">Add new Product </a></h1>
 						
 
 				<main class="links">

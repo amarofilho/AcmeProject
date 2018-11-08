@@ -5,11 +5,6 @@
  
  */
 
-
-
-
-
-
 /*the new function will handle site registrations*/
 
 function regClient($clientFirstname, $clientLastname, $clientEmail, $clientPassword){
@@ -53,6 +48,20 @@ function checkExistingEmail($clientEmail) {
  } else {
   return 1;
  }
+}
+
+// Get client data based on an email address
+function getClient($clientEmail){
+ $db = acmeConnect();
+ $sql = 'SELECT clientId, clientFirstname, clientLastname, clientEmail, clientLevel, clientPassword 
+         FROM clients
+         WHERE clientEmail = :email';
+ $stmt = $db->prepare($sql);
+ $stmt->bindValue(':email', $clientEmail, PDO::PARAM_STR);
+ $stmt->execute();
+ $clientData = $stmt->fetch(PDO::FETCH_ASSOC);
+ $stmt->closeCursor();
+ return $clientData;
 }
     
     

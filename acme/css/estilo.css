@@ -52,6 +52,7 @@ body{
     background-color:white;
     padding: 0px 0px 0px 0px;
     list-style:none;
+    margin-left: 20px; 
 }
 
 .menu label{
@@ -70,6 +71,7 @@ body{
     background-color:white;
     padding: 0px 0px 0px 0px;
     list-style:none;
+    margin-left: 20px;
 }
 
 .menu ul{
@@ -283,4 +285,20 @@ div.box{
     font-family:"Comic Sans MS", cursive, sans-serif;
     color: red;
     font-size: 18px;
+}
+
+.password{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    color: red;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.prodManagment{
+    
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    color: red;
+    font-size: 18px;
+    margin-left: 20px;
+    
 }

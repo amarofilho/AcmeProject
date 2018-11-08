@@ -111,8 +111,9 @@
                         <input type="text" name="invStyle" id="invStyle" <?php
                         if (isset($invStyle)){
                             echo"value='$invStyle'";}?>required> 
-
+                        
                         <div class= "gap2">
+                            <br>
                         <input type="submit" value="Add Product" name="botao">
                         <input type="hidden" name="action" value="new-prod">
                         </div>

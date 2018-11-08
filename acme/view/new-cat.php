@@ -32,6 +32,7 @@
                     <div class= "gap">
                     <input type="text" name="categoryName" id="categoryName" required>
                     </div>
+                    <br>
                     <input type="submit" value="include" name="submit">
                     <input type="hidden" name="action" value="newCatt">
                     </form>
