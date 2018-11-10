@@ -295,10 +295,30 @@ div.box{
 }
 
 .prodManagment{
-    
     font-family:"Comic Sans MS", cursive, sans-serif;
     color: red;
     font-size: 18px;
     margin-left: 20px;
     
 }
+
+.userList li{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    color: black;
+    font-size: 18px;
+    margin-left: 20px;
+   }
+   
+   .userList a{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    color: red;
+    font-size: 16px;
+    margin-left:0px;
+   }
+   
+   .userLogin{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    color: blue;
+    font-size: 20px;
+    margin-left: 20px;
+   }

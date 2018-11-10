@@ -1,4 +1,4 @@
-    <!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html lang="en">
 
     <head>
@@ -31,8 +31,8 @@
                     echo $_SESSION['message'];
                     }
                     ?>
-                                        
-                    <form action="/acme/accounts/index.php" method="post">
+      
+                    <form method="post" action="/acme/accounts/">
                                         
                     <p>Email address</p>
                     <input type="email" name="clientEmail" id="clientEmail" required placeholder="Enter a valid Email address" <?php
@@ -48,8 +48,8 @@
                                  
                                  
                     <div class="gap2">
-                    <input type="submit" value="Login" name="login" />
-                    <input type="hidden" name="action" value="Login2">
+                    <input type="submit" name="login"value="Login">
+                    <input type="hidden" name="action"value="Login2">
                     </div>
                     </form>
                     <p>Not a member?</p>

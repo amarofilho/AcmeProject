@@ -41,7 +41,7 @@
 						  <?php include '../common/main.php'; ?>
 				</main>
 				
-				<footer class="page-footer">
+				<footer class="footer">
 							<?php include '../common/footer.php'; ?>
 
 				</footer>
