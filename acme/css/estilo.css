@@ -322,3 +322,18 @@ div.box{
     font-size: 20px;
     margin-left: 20px;
    }
+   
+   .table{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    color: red;
+    font-size: 20px;
+    background-color: buttonface;
+    }
+   
+   .tableb{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    color: black;
+    font-size: 16px;
+    background-color: wheat;
+    
+    }

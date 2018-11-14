@@ -54,7 +54,7 @@ header('Location:/acme/accounts/?action=login');
                         <div class="userLogin">
                             <?php
                             //if(isset($_SESSION['loggedin'])){
-                            if ($_SESSION['clientData'] ['clientLevel'] >1){
+                            if ($_SESSION['clientData'] ['clientLevel'] >2){
                                 echo "<p><a href = '/acme/products/index.php'>Products page</a></p>"; 
                             } 
                             ?>

@@ -1,4 +1,10 @@
 <?php
+if ($_SESSION['clientData']['clientLevel'] < 2) {
+ header('location: /acme/');
+ exit;
+}
+?>
+<?php
 //Build the catList using the $categories array
  $catList = '<select name="categoryId"> <option value=0></option>';
  foreach ($categories as $category) {
