@@ -39,23 +39,28 @@ header('Location:/acme/accounts/?action=login');
                         <?php echo $navListLogin; ?>
                         <h1><?php $_SESSION['clientData'] = $clientData;
                         echo $_SESSION['clientData']['clientFirstname']." ".$_SESSION['clientData']['clientLastname'];?></h1>
+                        <p class="notice"> You are Logged in.</p>
                         
                     </nav>	
 
                     <main class="admin">
                         <ul class="userList">
-                            
+                           
                             <li>First Name:<a> <?php echo $_SESSION['clientData']['clientFirstname'];?></a></li>
                            <li>Last Name:<a> <?php echo $_SESSION['clientData'] ['clientLastname'];?></a></li>
                            <li>Email:<a> <?php echo $_SESSION['clientData'] ['clientEmail'];?></a></li>
-                           <li>User Level:<a> <?php echo $_SESSION['clientData'] ['clientLevel'];?></a> </li>
-               
+                           
                         </ul>
+                                                
                         <div class="userLogin">
+                            
+                            <h1 class="prodManagment"><a href="/acme/accounts/index.php?action=modClient">Update account information </a></h1>
                             <?php
-                            //if(isset($_SESSION['loggedin'])){
+                            
                             if ($_SESSION['clientData'] ['clientLevel'] >2){
-                                echo "<p><a href = '/acme/products/index.php'>Products page</a></p>"; 
+                                echo "<h2> Administrative Functions</h2>";
+                                echo"<p> Use the Link below to manage products</p>";
+                                echo "<h1 class='prodManagment'><a href = '/acme/products/index.php'>Products page</a></h1>"; 
                             } 
                             ?>
                         </div>

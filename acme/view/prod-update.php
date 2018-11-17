@@ -60,15 +60,16 @@ if ($_SESSION['clientData']['clientLevel'] < 2) {
                     ?>		
 
                     <form method="post" action="/acme/products/index.php"> 
-                        <div class="label">      
+                        <div class="label">
+                            
                         <label>Category</label>
                         <?php 
-                         $catList = '<select name="catType" id="catType">';
+                         $catList = '<select name="categoryId" id="categoryId">';
                          $catList .= "<option>Choose a Category</option>";
                         foreach ($categories as $category) {
                          $catList .= "<option value='$category[categoryId]'";
-                          if(isset($catType)){
-                           if($category['categoryId'] === $catType){
+                          if(isset($categoryId)){
+                           if($category['categoryId'] === $categoryId){
                            $catList .= ' selected ';
                           }
                          } elseif(isset($prodInfo['categoryId'])){

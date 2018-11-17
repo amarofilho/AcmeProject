@@ -34,7 +34,6 @@ function regClient($clientFirstname, $clientLastname, $clientEmail, $clientPassw
 }
 
 //This new function will check for an existing email address week8.
-
 function checkExistingEmail($clientEmail) {
  $db = acmeConnect();
  $sql = 'SELECT clientEmail FROM clients WHERE clientEmail = :email';
@@ -63,6 +62,64 @@ function getClient($clientEmail){
  $stmt->closeCursor();
  return $clientData;
 }
+
+
+//week9
+
+// Update a client
+function updateClient($clientFirstname, $clientLastname, $clientEmail, $clientId) {
+// Create a connection
+$db = acmeConnect();
+// The SQL statement to be used with the database
+$sql = 'UPDATE clients SET clientFirstname = :clientFirstname, clientLastname = :clientLastname, clientEmail = :clientEmail WHERE clientId = :clientId';
+$stmt = $db->prepare($sql);
+$stmt->bindValue(':clientFirstname', $clientFirstname, PDO::PARAM_STR);
+$stmt->bindValue(':clientLastname', $clientLastname, PDO::PARAM_STR);
+$stmt->bindValue(':clientEmail', $clientEmail, PDO::PARAM_STR);
+$stmt->bindValue(':clientId', $clientId, PDO::PARAM_INT);
+$stmt->execute();
+$rowsChanged = $stmt->rowCount();
+$stmt->closeCursor();
+return $rowsChanged;
+}
+
+////This function will get basic clients information from the clients table for starting an update process
+//function getClientsBasics() {
+// $db = acmeConnect();
+// $sql = 'SELECT clientId, clientId FROM clients ORDER BY clientId ASC';
+// $stmt = $db->prepare($sql);
+// $stmt->execute();
+// $clients = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// $stmt->closeCursor();
+// return $clients;
+//}
+
+// Get clients information by clientId
+function getClientInfo($clientId){
+ $db = acmeConnect();
+ $sql = 'SELECT * FROM clients WHERE clientId = :clientId';
+ $stmt = $db->prepare($sql);
+ $stmt->bindValue(':clientId', $clientId, PDO::PARAM_INT);
+ $stmt->execute();
+ $clientInfo = $stmt->fetch(PDO::FETCH_ASSOC);
+ $stmt->closeCursor();
+ return $clientInfo;
+}
+
+function updateClientPass($clientPassword, $clientId){
+$db = acmeConnect();
+$sql = 'UPDATE clients SET clientPassword = :clientPassword WHERE clientId = :clientId';
+$stmt = $db->prepare($sql);
+$stmt->bindValue(':clientPassword', $clientPassword, PDO::PARAM_STR);
+$stmt->bindValue(':clientId', $clientId, PDO::PARAM_INT);
+$stmt->execute();
+$rowsChanged = $stmt->rowCount();
+$stmt->closeCursor();
+return $rowsChanged;
+}
+
+
+
     
     
 

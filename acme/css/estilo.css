@@ -47,7 +47,7 @@ body{
 
 .menu h1{
     font-family:"Comic Sans MS", cursive, sans-serif;
-    font-size: 35px;
+    font-size: 42px;
     color: #000000;
     background-color:white;
     padding: 0px 0px 0px 0px;
@@ -188,6 +188,25 @@ div.box{
     padding: 10px 10px 0px 20px;
 }
 
+.textBox2 h1{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 42px;
+    color: #000000;
+    background-color:white;
+    padding: 0px 0px 0px 0px;
+    list-style:none;
+    margin-left: 20px; 
+}
+
+.textBox2 h2{
+     font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    color: #000000;
+    background-color:white;
+    padding: 0px 0px 0px 0px;
+    list-style:none;
+    margin-left: 20px;
+}
 .links p{
     font-family:"Comic Sans MS", cursive, sans-serif;
     font-size: 25px;
@@ -318,22 +337,45 @@ div.box{
    
    .userLogin{
     font-family:"Comic Sans MS", cursive, sans-serif;
-    color: blue;
+    color: black;
     font-size: 20px;
+    padding: 0px 0px 0px 0px;
+    list-style:none;
     margin-left: 20px;
    }
    
-   .table{
+   .userLogin h2{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 33px;
+    color: #000000;
+    padding: 0px 0px 0px 0px;
+    list-style:none;
+    margin-left: 20px;
+   }
+   
+   table, td{
     font-family:"Comic Sans MS", cursive, sans-serif;
     color: red;
     font-size: 20px;
     background-color: buttonface;
-    }
-   
-   .tableb{
-    font-family:"Comic Sans MS", cursive, sans-serif;
-    color: black;
-    font-size: 16px;
-    background-color: wheat;
+    margin-left: 20px;
     
     }
+    
+       
+    .notice{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    color: red;
+    font-size: 20px;
+    margin-left: 20px;
+    }
+    
+    .textBox textarea{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    color: black;
+    background-color:white;
+    padding: 10px 0px 0px 0px;
+    margin-left: 20px;
+}
+

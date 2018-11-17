@@ -1,4 +1,4 @@
-    <?php
+<?php
  //This is the products Controller
 
 // Creator acess a Session
@@ -37,7 +37,6 @@ case 'new-cat':
 case 'prod':
         include '../view/new-prod.php';
     break;
-     
  case 'newCatt':
     // Filter and store the data
      // inseri filtro sanatize abaixo
@@ -91,13 +90,13 @@ case 'prod':
     $newprodOutcome = addProduct($invName, $invDescription, $invImage, $invThumbnail, $invPrice, 
     $invStock, $invSize, $invWeight, $invLocation, $categoryId, $invVendor, $invStyle);
     if ($newprodOutcome === 1){
-    $message  = "<h1>Congrats! '$invName' has been created</h1>";
+    $message  = "<p class='notice'>Congrats! $invName has been created</p>";
     include '../view/new-prod.php';
     exit;
     } else {
-     $message = "<p>Sorry, but '.$invName.'  registration failed. Please try again.</p>";
-     include '../view/new-prod.php';
-     exit;
+    $message = "<p>Sorry, but '.$invName.'  registration failed. Please try again.</p>";
+    include '../view/new-prod.php';
+    exit;
     }
     break;
  
@@ -112,43 +111,43 @@ case 'mod':
     break;
     
 case 'updateProd':
- $catType = filter_input(INPUT_POST, 'catType', FILTER_SANITIZE_NUMBER_INT);
- $invName = filter_input(INPUT_POST, 'invName', FILTER_SANITIZE_STRING);
- $invDescription = filter_input(INPUT_POST, 'invDescription', FILTER_SANITIZE_STRING);
- $invImg = filter_input(INPUT_POST, 'invImg', FILTER_SANITIZE_STRING);
- $invThumb = filter_input(INPUT_POST, 'invThumb', FILTER_SANITIZE_STRING);
- $invPrice = filter_input(INPUT_POST, 'invPrice', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
- $invStock = filter_input(INPUT_POST, 'invStock', FILTER_SANITIZE_NUMBER_INT);
- $invSize = filter_input(INPUT_POST, 'invSize', FILTER_SANITIZE_NUMBER_INT);
- $invWeight = filter_input(INPUT_POST, 'invWeight', FILTER_SANITIZE_NUMBER_INT);
- $invLocation = filter_input(INPUT_POST, 'invLocation', FILTER_SANITIZE_STRING);
- $invVendor = filter_input(INPUT_POST, 'invVendor', FILTER_SANITIZE_STRING);
- $invStyle = filter_input(INPUT_POST, 'invStyle', FILTER_SANITIZE_STRING);
- $invId = filter_input(INPUT_POST, 'invId', FILTER_SANITIZE_NUMBER_INT);
+    $categoryId = filter_input(INPUT_POST, 'categoryId', FILTER_SANITIZE_NUMBER_INT);
+    $invName = filter_input(INPUT_POST, 'invName', FILTER_SANITIZE_STRING);
+    $invDescription = filter_input(INPUT_POST, 'invDescription', FILTER_SANITIZE_STRING);
+    $invImage = filter_input(INPUT_POST, 'invImage', FILTER_SANITIZE_STRING);
+    $invThumbnail = filter_input(INPUT_POST, 'invThumbnail', FILTER_SANITIZE_STRING);
+    $invPrice = filter_input(INPUT_POST, 'invPrice', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+    $invStock = filter_input(INPUT_POST, 'invStock', FILTER_SANITIZE_NUMBER_INT);
+    $invSize = filter_input(INPUT_POST, 'invSize', FILTER_SANITIZE_NUMBER_INT);
+    $invWeight = filter_input(INPUT_POST, 'invWeight', FILTER_SANITIZE_NUMBER_INT);
+    $invLocation = filter_input(INPUT_POST, 'invLocation', FILTER_SANITIZE_STRING);
+    $invVendor = filter_input(INPUT_POST, 'invVendor', FILTER_SANITIZE_STRING);
+    $invStyle = filter_input(INPUT_POST, 'invStyle', FILTER_SANITIZE_STRING);
+    $invId = filter_input(INPUT_POST, 'invId', FILTER_SANITIZE_NUMBER_INT);
 
- if (empty($catType) || empty($invName) || empty($invDescription) || empty($invImg) || empty($invThumb) || empty($invPrice) || empty($invStock) || empty($invSize) || empty($invWeight) || empty($invLocation) || empty($invVendor) || empty($invStyle)) {
-  $message = '<p>Please complete all information for the item! Double check the category of the item.</p>';
-  include '../view/prod-update.php';
-  exit;
- }
- $updateResult = updateProduct($catType, $invName, $invDescription, $invImg, $invThumb, $invPrice, $invStock, $invSize, $invWeight, $invLocation, $invVendor, $invStyle, $invId);
- if ($updateResult) {
-  $message = "<p class='notice'>Congratulations, $invName was successfully updated.</p>";
-  $_SESSION['message'] = $message;
-  header('location: /acme/products/');
-  exit;
- } else {
-  $message = "<p class='notice'>Error. $invName was not updated.</p>";
-  include '../view/prod-update.php';
-  exit;
- }
-break;
+    if (empty($categoryId) || empty($invName) || empty($invDescription) || empty($invImage) || empty($invThumbnail) || empty($invPrice) || empty($invStock) || empty($invSize) || empty($invWeight) || empty($invLocation) || empty($invVendor) || empty($invStyle)) {
+    $message = '<p>Please complete all information for the item! Double check the category of the item.</p>';
+    include '../view/prod-update.php';
+    exit;
+    }
+    $updateResult = updateProduct($categoryId, $invName, $invDescription, $invImage, $invThumbnail, $invPrice, $invStock, $invSize, $invWeight, $invLocation, $invVendor, $invStyle, $invId);
+    if ($updateResult) {
+    $message = "<p class='notice'>Congratulations, $invName was successfully updated.</p>";
+    $_SESSION['message'] = $message;
+    header('location: /acme/products/');
+    exit;
+    } else {
+    $message = "<p class='notice'>Error. $invName was not updated.</p>";
+    include '../view/prod-update.php';
+    exit;
+    }
+    break;
 
 case 'del':
     $invId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
     $prodInfo = getProductInfo($invId);
     if(count($prodInfo)<1){
-    $message = 'Sorry, no product information could be found.';
+    $message = "<p class='notice'>Sorry, no product information could be found.</p>";
     }
     include '../view/prod-delete.php';
     exit;
@@ -160,23 +159,23 @@ case 'deleteProd':
     $invId = filter_input(INPUT_POST, 'invId', FILTER_SANITIZE_NUMBER_INT);
 
     $deleteResult = deleteProduct($invId);
-     if ($deleteResult) {
-      $message = "<p class='notice'>Congratulations, $invName was successfully deleted.</p>";
-      $_SESSION['message'] = $message;
-      header('location: /acme/products/');
-      exit;
-     } else {
-      $message = "<p class='notice'>Error. $invName was not deleted.</p>";
-      $_SESSION['message'] = $message;
+    if ($deleteResult) {
+    $message = "<p class='notice'>Congratulations, $invName was successfully deleted.</p>";
+    $_SESSION['message'] = $message;
     header('location: /acme/products/');
-        exit;
+    exit;
+    } else {
+    $message = "<p class='notice'>Error. $invName was not deleted.</p>";
+    $_SESSION['message'] = $message;
+    header('location: /acme/products/');
+    exit;
     }
     break;
- 
+    
 default:
     $products = getProductBasics();
     if(count($products) > 0){
-    $prodList = '<table>';
+    $prodList = '<table border="1px" cellpadding="5px" cellspacing="5">';
     $prodList .= '<thead>';
     $prodList .= '<tr><th class="table">Product Name</th><td>&nbsp;</td><td>&nbsp;</td></tr>';
     $prodList .= '</thead>';
@@ -188,9 +187,10 @@ default:
     }
     $prodList .= '</tbody></table>';
     } else {
-    $message = '<p class="notify">Sorry, no products were returned.</p>';
+    $message = '<p class="notice">Sorry, no products were returned.</p>';
     }
     include '../view/prod-mgmt.php';
     break;       
 }  
      
+
