@@ -20,8 +20,9 @@ $categories = getCategories();
  $navList = '<ul>';
  $navList .= "<li><a href='/acme/index.php' title='View the Acme home page'>Home</a></li>";
  foreach ($categories as $category) {
-  $navList .= "<li><a href='/acme/index.php?action=".urlencode($category['categoryName'])."' title='View our $category[categoryName] product line'>$category[categoryName]</a></li>";
- }
+  //$navList .= "<li><a href='/acme/index.php?action=".urlencode($category['categoryName'])."' title='View our $category[categoryName] product line...'>$category[categoryName]</a></li>";
+ $navList .= "<li><a href='/acme/products/?action=category&categoryName=".urlencode($category['categoryName'])."' title='View our $category[categoryName] product line.'>$category[categoryName]</a></li>";
+  }
  $navList .= '</ul>';
  
     
@@ -34,10 +35,12 @@ $action = filter_input(INPUT_POST, 'action');
 case 'new-cat':
         include '../view/new-cat.php';    
     break;
+
 case 'prod':
         include '../view/new-prod.php';
     break;
- case 'newCatt':
+
+case 'newCatt':
     // Filter and store the data
      // inseri filtro sanatize abaixo
     $categoryName = filter_input(INPUT_POST, 'categoryName',FILTER_SANITIZE_STRING);
@@ -61,7 +64,7 @@ case 'prod':
     }
     break;
    
- case'new-prod':
+case'new-prod':
      //editando abaixo
     $invName = filter_input(INPUT_POST, 'invName',FILTER_SANITIZE_STRING);
     $invDescription = filter_input(INPUT_POST, 'invDescription',FILTER_SANITIZE_STRING);
@@ -170,6 +173,30 @@ case 'deleteProd':
     header('location: /acme/products/');
     exit;
     }
+    break;
+    
+case 'category':
+    $categoryName = filter_input(INPUT_GET, 'categoryName', FILTER_SANITIZE_STRING);
+    $products = getProductsByCategory($categoryName);
+    if(!count($products)){
+    $message = "<p class='notice'>Sorry, no $categoryName products could be found.</p>";
+    } else {
+    $prodDisplay = buildProductsDisplay($products);
+    }
+
+    include '../view/category.php';
+    break;
+    
+case 'prod-details':
+    $invName = filter_input(INPUT_GET, 'invName', FILTER_SANITIZE_STRING);
+    $products = getProductsByName($invName);
+    if(!count($products)){
+    $message = "<p class='notice'>Sorry, no $invName  could not be found.</p>";
+    } else {
+    $prodDetailsDisplay = buildDetailsDisplay($products);
+    }
+
+    include '../view/product-detail.php';
     break;
     
 default:

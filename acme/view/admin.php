@@ -21,14 +21,13 @@ header('Location:/acme/accounts/?action=login');
             <div class="main-page">
 	
 		
-                    <header class="page-header">
+                    <header>
                         <div class="teste">
-
-                        <div class = "logotipo">
-                            <a href="/acme/index.php"><img src= " /acme/images/site/logo.gif" alt="logo" width= "230" height= "140"/></a> 
-                        </div>
+                        <a href="/acme/index.php"><img src= " /acme/images/site/logo.gif" alt="logo" width="180" height="80"/></a>
+                     
 
                         <div class="folder">
+                            
                             <a href="/acme/accounts/index.php?action=logout">Logout</a>
                             
                             </div>
@@ -37,8 +36,8 @@ header('Location:/acme/accounts/?action=login');
 				
                     <nav class="menu">
                         <?php echo $navListLogin; ?>
-                        <h1><?php $_SESSION['clientData'] = $clientData;
-                        echo $_SESSION['clientData']['clientFirstname']." ".$_SESSION['clientData']['clientLastname'];?></h1>
+                        <p class="user"><?php $_SESSION['clientData'] = $clientData;
+                        echo $_SESSION['clientData']['clientFirstname']." ".$_SESSION['clientData']['clientLastname'];?></p>
                         <p class="notice"> You are Logged in.</p>
                         
                     </nav>	

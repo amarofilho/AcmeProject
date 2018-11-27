@@ -16,7 +16,7 @@
             <div class="main-page">
 	
 		
-		<header class="page-header">
+		<header class="header">
 		    <?php include '../common/page-header.php'; ?>
 		</header>
 													
@@ -57,7 +57,7 @@
                     <div class="gap2">
                     <a href="/acme/accounts/index.php?action=register"
                     class="login">
-                    Create an Account
+                    Create Account
                     </a>
                     </div>
                 </main>

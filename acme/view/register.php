@@ -1,12 +1,11 @@
 <!DOCTYPE HTML>
-<html>
-
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>ACME</title>
         <meta name="author" content="Amaro Filho">
         <meta name="viewport" content="width=device-width">
-        <link href='../css/estilo.css' rel='stylesheet' type='text/css'>
+        <link href='/acme/css/estilo.css' rel='stylesheet' type='text/css'>
     </head>
 
     <body>
@@ -14,21 +13,15 @@
         <div class="content">
 		
             <div class="main-page">
-	
-		
-                <header class="page-header">
-
-                    <?php include '../common/page-header.php'; ?>
-
+			
+                <header>
+                <?php include '../common/page-header.php'; ?>
                 </header>
 				
-									
-                <nav class="menu">
-
+		<nav class="menu">
                     <?php echo $navListLogin; ?>
                     <h1> Acme Registration </h1>
                     <h2>All fields are required</h2>
-
                 </nav>	
                 
 		<main class="textBox">
@@ -73,9 +66,7 @@
 				
                 <footer class="footer">
                     <?php include '../common/footer.php'; ?>
-
                 </footer>
-
             </div>
         </div>
     </body>

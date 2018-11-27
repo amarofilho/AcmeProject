@@ -25,7 +25,7 @@ if ($_SESSION['clientData']['clientLevel'] < 2) {
 
             <div class="main-page">
 
-                <header class="page-header">
+                <header>
                     <?php include '../common/page-header.php'; ?>
                 </header>
 

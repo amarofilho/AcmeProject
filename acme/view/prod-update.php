@@ -32,7 +32,7 @@ if ($_SESSION['clientData']['clientLevel'] < 2) {
         elseif(isset($invName)) { echo $invName; }?> | Acme, Inc</title>
         <meta name="author" content="Amaro Filho">
         <meta name="viewport" content="width=device-width">
-        <link href='../css/estilo.css' rel='stylesheet' type='text/css'>
+        <link href='/acme/css/estilo.css' rel='stylesheet' type='text/css'>
     </head>
 
     <body>
@@ -41,7 +41,7 @@ if ($_SESSION['clientData']['clientLevel'] < 2) {
 
             <div class="main-page">
 
-                <header class="page-header">
+                <header>
                     <?php include '../common/page-header.php'; ?>
                 </header>
 

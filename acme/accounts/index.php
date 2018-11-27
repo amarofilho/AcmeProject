@@ -20,7 +20,9 @@ session_start();
  $navListLogin = '<ul>';
  $navListLogin .= "<li><a href='/acme/index.php' title='View the Acme home page'>Home</a></li>";
  foreach ($categories as $category) {
-  $navListLogin .= "<li><a href='/acme/index.php?action=".urlencode($category['categoryName'])."' title='View our $category[categoryName] product line'>$category[categoryName]</a></li>";
+  //$navListLogin .= "<li><a href='/acme/index.php?action=".urlencode($category['categoryName'])."' title='View our $category[categoryName] product linexx'>$category[categoryName]</a></li>";
+ $navListLogin .= "<li><a href='/acme/products/?action=category&categoryName=".urlencode($category['categoryName'])."' title='View our $category[categoryName] product line.'>$category[categoryName]</a></li>";
+     
  }
  $navListLogin .= '</ul>';
  
@@ -93,7 +95,6 @@ $action = filter_input(INPUT_POST, 'action');
          include '../view/register.php';
          exit;
         }
-//         break;
 
     case 'Login2':
 
@@ -135,7 +136,6 @@ $action = filter_input(INPUT_POST, 'action');
 
         include '../view/admin.php';
         exit;
-
      
     case 'logout':
         $_SESSION = array();
@@ -147,11 +147,6 @@ $action = filter_input(INPUT_POST, 'action');
          //include '../view/home.php';
          break;
 
-//        } else {
-//        include '../view/login.php';
-//        exit;
-//        }
-        
     case 'modClient':
           include '../view/client-update.php';
           break;

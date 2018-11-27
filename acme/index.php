@@ -15,7 +15,9 @@ $categories = getCategories();
  $navList = '<ul>';
  $navList .= "<li><a href='/acme/index.php' title='View the Acme home page'>Home</a></li>";
  foreach ($categories as $category) {
-  $navList .= "<li><a href='/acme/index.php?action=".urlencode($category['categoryName'])."' title='View our $category[categoryName] product line'>$category[categoryName]</a></li>";
+  //$navList .= "<li><a href='/acme/index.php?action=".urlencode($category['categoryName'])."' title='View our $category[categoryName] product line'>$category[categoryName]</a></li>";
+ $navList .= "<li><a href='/acme/products/?action=category&categoryName=".urlencode($category['categoryName'])."' title='View our $category[categoryName] product line.'>$category[categoryName]</a></li>";
+     
  }
  $navList .= '</ul>';
  

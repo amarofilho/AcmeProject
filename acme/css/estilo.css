@@ -1,6 +1,146 @@
 /********************************
 * Default Styles - Mobile First
-********************************/	
+********************************/
+
+html{
+ box-sizing: border-box;
+}
+
+*, *:before, *:after{
+ box-sizing: inherit;
+}
+
+#prod-display{
+ flex-flow: row wrap;
+ justify-content: flex-start;
+}
+
+#prod-display li{
+ max-width: 200px;
+ flex: 1 0 auto;
+ text-align: center;
+ max-height: 400px;
+}
+/*xxxxx*/
+@media screen and (min-width: 320px) {
+body{
+    background-image: url(/acme/images/site/background.jpg);
+    background-size: cover;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 12px;
+}  
+.content{
+    padding: 0px 10px 10px 10px;
+ }
+ 
+ .main-page{
+    background-color: white;
+    background-repeat: no-repeat;
+}
+
+
+ header > div {
+    padding: 4%;
+    display: block;
+    height: 3px; 
+}
+
+header > div img.acme-logo {
+    max-width: 40px;
+    position: relative;
+    top: -5px;
+}
+
+header div.myAccount {
+    float: right;
+}
+
+header div.myAccount, div.myAccount a h3 {
+    display: inline-block;
+} 
+
+div.myAccount a img {
+    width: 15px;
+}      
+        
+.span{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 10px;
+    
+    color: red;
+ }
+ 
+ .minhaConta{
+    margin-left: 10px;
+    color: black;
+ }
+ 
+ .menu h1{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 12px;
+    color: #000000;
+    background-color:white;
+    padding: 0px 0px 0px 0px;
+    list-style:none;
+    margin-left: 10px; 
+}
+
+.menu label{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 10px;
+    color: #000000;
+    background-color:white;
+    padding: 0px 0px 0px 0px;
+    list-style:none;
+}
+
+.menu h2{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 10px;
+    color: #000000;
+    background-color:white;
+    padding: 0px 0px 0px 0px;
+    list-style:none;
+    margin-left: 10px;
+}
+
+.menu ul{
+    padding:0px;
+    margin:0px;
+    background-color:#e61919;
+    list-style:none;
+}
+
+.menu ul li{ 
+    display: inline; 
+}
+ 
+.menu ul li a{
+    padding: 15px 40px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    border-bottom:2px solid #E61919;
+}
+
+.menu ul li a:hover{
+    background-color:white;
+    color: red;
+    border-bottom:2px solid #EA0000;
+}
+
+.menu ul h1{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 12px;
+    color: #000000;
+    background-color:white;
+    padding: 0px 0px 0px 0px;
+}
+}
+
+@media screen and (min-width: 768px) {
  
 body{
     background-image: url(/acme/images/site/background.jpg);
@@ -14,24 +154,70 @@ body{
     padding: 0px 60px 20px 60px;
  }
  
- .main-page{
+.main-page{
     background-color: white;
     background-repeat: no-repeat;
 }
- 
- 
+  
  .page-header{
-    background-size:70px;
-    padding-top: 5px;
-    padding: 10px 30px 0px 30px;
-    background-repeat: no-repeat;
-    background-position: right;
-    background-color: white;
+    width: 10px;
+    height: auto;
 }
 
-.folder span{
-    margin-right: 18px;
-    color: red;
+header > div {
+    padding: 4%;
+    display: block;
+    height: 30px; 
+}
+
+header > div img.acme-logo {
+    max-width: 190px;
+    position: relative;
+    top: -35px;
+}
+
+header div.myAccount {
+    float: right;
+}
+
+header div.myAccount, div.myAccount a h3 {
+    display: inline-block;
+} 
+
+div.myAccount a img {
+    width: 60px;
+    margin-left:-20px;
+    padding-right: 0px;
+    padding-left: 0px;
+}  
+
+.folder{
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.teste{
+   margin-bottom: 20px;
+   margin-top: 5px;
+   padding-bottom: 60px;
+   padding-top: 20px;
+}
+        
+.span{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 14px;
+    color: black;
+    margin-right: 0px;
+ }
+ 
+.minhaConta{
+    padding-right: - 35px;
+    color: black;
  }
  
 .teste{
@@ -89,7 +275,7 @@ body{
     padding: 15px 40px;
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 20px;
-    display: inline-block;
+    display: flex-row;
     color: white;
     text-decoration: none;
     border-bottom:2px solid #E61919;
@@ -121,9 +307,17 @@ body{
     background-position-x: center, center;
     background-position-y: center, center;
 }
-	
+
+.prodCat h1{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    color: black;
+    font-size: 35px;
+    margin-left: 20px;
+    }
+
 .text1{
     padding-top: 20%;
+    
 }
 	
 .main h2{
@@ -151,7 +345,31 @@ div.box{
     padding: .5rem;
 }
 
+.textBoxArea1{
+  border-width: thin;
+  border-style: solid;
+  border-color: red;
+  margin-right: 20px;
+  margin-left: 20px;
+  }
+  
+.textBoxArea1 h2{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    color: #000000;
+    background-color:white;
+    padding: 0px 0px 0px 0px;
+    list-style:none;
+    margin-left: 20px;
+}
 
+.textBoxArea2{
+  border-width: thin;
+  border-style: solid;
+  border-color: red;
+  margin-right: 20px;
+  margin-left: 20px;
+}
 
 .textBox p{
     font-family:"Comic Sans MS", cursive, sans-serif;
@@ -207,6 +425,7 @@ div.box{
     list-style:none;
     margin-left: 20px;
 }
+
 .links p{
     font-family:"Comic Sans MS", cursive, sans-serif;
     font-size: 25px;
@@ -268,6 +487,7 @@ div.box{
     background-color:red;
     padding: 10px 10px 0px 20px;
 }
+
 .gap2 a{ 
     font-family:"Comic Sans MS", cursive, sans-serif;
     font-size: 25px;
@@ -283,7 +503,6 @@ div.box{
     background-color:white;
     padding: 10px 10px 0px 20px;
 }
-
 
 .login {
     width: 250px;
@@ -328,14 +547,14 @@ div.box{
     margin-left: 20px;
    }
    
-   .userList a{
+.userList a{
     font-family:"Comic Sans MS", cursive, sans-serif;
     color: red;
     font-size: 16px;
     margin-left:0px;
    }
    
-   .userLogin{
+.userLogin{
     font-family:"Comic Sans MS", cursive, sans-serif;
     color: black;
     font-size: 20px;
@@ -344,7 +563,7 @@ div.box{
     margin-left: 20px;
    }
    
-   .userLogin h2{
+.userLogin h2{
     font-family:"Comic Sans MS", cursive, sans-serif;
     font-size: 33px;
     color: #000000;
@@ -353,29 +572,63 @@ div.box{
     margin-left: 20px;
    }
    
-   table, td{
+table, td{
     font-family:"Comic Sans MS", cursive, sans-serif;
     color: red;
     font-size: 20px;
     background-color: buttonface;
     margin-left: 20px;
-    
     }
     
-       
-    .notice{
+segundaTable, td{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    color: red;
+    font-size: 18px;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+    
+.notice{
     font-family:"Comic Sans MS", cursive, sans-serif;
     color: red;
     font-size: 20px;
     margin-left: 20px;
     }
     
-    .textBox textarea{
+.user{
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    color: black;
+    font-size: 45px;
+    margin-left: 20px;;
+}
+ 
+.textBox textarea{
     font-family:"Comic Sans MS", cursive, sans-serif;
     font-size: 25px;
     color: black;
     background-color:white;
     padding: 10px 0px 0px 0px;
     margin-left: 20px;
+ }
+ #prod-display{
+ margin: .5em;
+ padding: 0;
+ display: flex;
+ flex-direction: row;
 }
 
+#prod-display li{
+ margin-bottom: .5em;
+ border: 1px #ccc solid;
+ list-style-type: none;
+ flex: 1 1 auto;
+}
+                
+#prod-display li img{
+ width: 100%;
+ height: 200px;
+}
+
+
+}
