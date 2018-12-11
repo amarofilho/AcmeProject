@@ -27,13 +27,13 @@
                         
                         <h1><?php echo $invName; ?></h1>
                         <?php if(isset($message)){
-                         echo $message; } 
-                         ?>
+                         echo $message; }?>
+                         
                     </div>
                     <table id="segundaTable">
                         <?php if(isset($prodDetailsDisplay)){ 
-                         echo $prodDetailsDisplay; 
-                        } ?>
+                         echo $prodDetailsDisplay; }?>
+                        
                     </table>    
                     			
                     				
@@ -45,4 +45,3 @@
             </div>
 	</body>
 </html>
-

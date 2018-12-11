@@ -194,11 +194,13 @@ case 'prod-details':
     $message = "<p class='notice'>Sorry, no $invName  could not be found.</p>";
     } else {
     $prodDetailsDisplay = buildDetailsDisplay($products);
+    //$prodDetailsDisplay = getThumbnails($invId);
     }
-
+    
     include '../view/product-detail.php';
     break;
     
+        
 default:
     $products = getProductBasics();
     if(count($products) > 0){
