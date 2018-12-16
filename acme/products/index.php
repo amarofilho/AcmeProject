@@ -200,19 +200,49 @@ case 'prod-details':
     include '../view/product-detail.php';
     break;
     
+    // final project
+case 'featured':
+    $invId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+    $pastFeatured = getCurrentFeatured();
+    if (!isset($pastFeatured['invId'])){
+    $message = "<p class='notice'>No previous product was featured.<br>";
+    }
+    else {
+    //Unset past featured item
+    $success = unsetPastFeatured();
+    }
+      //Set newly featured item
+    setNewFeatured($invId);
+    $currentFeatured = getCurrentFeatured();
+
+    //if current feature was successfully set, print messages to that effect
+    if (isset($currentFeatured)){
+    if (!isset($message)){
+    $message = "<p class='notice'>Previously featured item: $pastFeatured[invName] was cleared.<br>";
+    }
+    $message .= "New featured item: $currentFeatured[invName] was set.</p>";
+    }
+    else{
+    $message .= "Not able to set new featured product. Please try again.</p>";
+    }
+    $_SESSION['message'] = $message;
+    header('location: /acme/products');
+    break;
+    
         
 default:
     $products = getProductBasics();
     if(count($products) > 0){
     $prodList = '<table border="1px" cellpadding="5px" cellspacing="5">';
     $prodList .= '<thead>';
-    $prodList .= '<tr><th class="table">Product Name</th><td>&nbsp;</td><td>&nbsp;</td></tr>';
+    $prodList .= '<tr><th class="table">Product Name</th><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>';
     $prodList .= '</thead>';
     $prodList .= '<tbody class="table">';
     foreach ($products as $product) {
     $prodList .= "<tr><td>$product[invName]</td>";
     $prodList .= "<td><a href='/acme/products?action=mod&id=$product[invId]' title='Click to modify'>Modify</a></td>";
-    $prodList .= "<td><a href='/acme/products?action=del&id=$product[invId]' title='Click to delete'>Delete</a></td></tr>";
+    $prodList .= "<td><a href='/acme/products?action=del&id=$product[invId]' title='Click to delete'>Delete</a></td>";
+    $prodList .= "<td><a href='/acme/products?action=featured&id=$product[invId]' title='Click to feature'>Feature</a></td></tr>";
     }
     $prodList .= '</tbody></table>';
     } else {

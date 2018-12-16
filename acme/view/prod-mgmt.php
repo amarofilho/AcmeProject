@@ -25,7 +25,7 @@ if (isset($_SESSION['message'])) {
                 <div class="main-page">
 
                     <header>
-                        <div class="teste">
+<!--                        <div class="teste">
                         <a href="/acme/index.php"><img src= " /acme/images/site/logo.gif" alt="logo" width="180" height="80"/></a>
                      
 
@@ -34,7 +34,8 @@ if (isset($_SESSION['message'])) {
                             <a href="/acme/accounts/index.php?action=logout">Logout</a>
                             
                             </div>
-                        </div>
+                        </div>-->
+                        <?php include '../common/page-header.php'; ?>
                     </header>
 
 

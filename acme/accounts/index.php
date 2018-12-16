@@ -133,6 +133,9 @@ $action = filter_input(INPUT_POST, 'action');
         // Store the array into the session
         $_SESSION['clientData'] = $clientData;
         // Send them to the admin view
+        if(isset($_COOKIE['firstname'])){
+        setCookie('firstname', '', strtotime('-1 year'), '/');
+        }
 
         include '../view/admin.php';
         exit;
@@ -220,6 +223,14 @@ $action = filter_input(INPUT_POST, 'action');
         include '../view/admin.php';
         break;
         
+//    case 'loggedIn':
+//        if ($_SESSION['loggedin'] == TRUE){
+//        include '../view/admin.php';}
+//        else {
+//        include '../view/home.php';
+//        }
+//        break; 
+            
     case 'default':
         include '../view/admin.php';
  

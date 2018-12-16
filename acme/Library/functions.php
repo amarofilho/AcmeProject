@@ -222,5 +222,17 @@ function resizeImage($old_image_path, $new_image_path, $max_width, $max_height){
   imagedestroy($old_image);
 } // ends the if - else began on line 36
 
+function buildFeaturedDisplay($productInfo){
+    // change the main site image
+    
+   $pd = "<div class= 'prodDisplay'>";
+   $pd .= "<img src='$productInfo[invImage]' alt='Image of $productInfo[invName] on Acme Site'>";
+   $pd .= "<p>'$productInfo[invDescription]</p>";
+   $pd .= "<a href='/acme/cart/'><img id='actionbnt' alt='Add to cart' src='/acme/images/site/iwantit.gif'></a>";
+   $pd .= '</div>';
+    return $pd;
+}
+
+
 
   

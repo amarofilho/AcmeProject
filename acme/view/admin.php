@@ -22,7 +22,7 @@ header('Location:/acme/accounts/?action=login');
 	
 		
                     <header>
-                        <div class="teste">
+<!--                        <div class="teste">
                         <a href="/acme/index.php"><img src= " /acme/images/site/logo.gif" alt="logo" width="180" height="80"/></a>
                      
 
@@ -31,13 +31,14 @@ header('Location:/acme/accounts/?action=login');
                             <a href="/acme/accounts/index.php?action=logout">Logout</a>
                             
                             </div>
-                        </div>
+                        </div>-->
+                           <?php include '../common/page-header.php'; ?>
                     </header>
 				
                     <nav class="menu">
                         <?php echo $navListLogin; ?>
-                        <p class="user"><?php $_SESSION['clientData'] = $clientData;
-                        echo $_SESSION['clientData']['clientFirstname']." ".$_SESSION['clientData']['clientLastname'];?></p>
+                        <!--<p class="user">$_SESSION['clientData'] = $clientData;-->
+                        <p class="user"><?php echo $_SESSION['clientData']['clientFirstname']." ".$_SESSION['clientData']['clientLastname'];?></p>
                         <p class="notice"> You are Logged in.</p>
                         
                     </nav>	

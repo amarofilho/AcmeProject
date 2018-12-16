@@ -20,6 +20,7 @@
 
                 <nav class="menu">
                     <?php echo $navList; ?>
+                    <h1>Welcome to Acme!</h1>
                 </nav>	
 
                 <div class="page-nav">
@@ -27,7 +28,9 @@
                 </div>
 
                 <main class="main">
+                    
                     <?php include 'common/main.php'; ?>
+                    
                 </main>
 
                 <footer class="footer">

@@ -159,7 +159,7 @@ body{
     background-repeat: no-repeat;
 }
   
- .page-header{
+.page-header{
     width: 10px;
     height: auto;
 }
@@ -186,19 +186,22 @@ header div.myAccount, div.myAccount a h3 {
 
 div.myAccount a img {
     width: 60px;
-    margin-left:-20px;
+    margin-left:0px;
     padding-right: 0px;
     padding-left: 0px;
 }  
 
-.folder{
+header > div img.folder{
     float: left;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left:0px;
+     margin-right: 0px;
+    padding-top:0px;
     padding-bottom: 0px;
-    padding-right: 0px;
-    padding-left: 0px;
+    max-width: 30px;
+   
+    
 }
 
 .teste{
@@ -212,7 +215,9 @@ div.myAccount a img {
     font-family:"Comic Sans MS", cursive, sans-serif;
     font-size: 14px;
     color: black;
-    margin-right: 0px;
+    margin-right: 1px;
+   padding-right: 0px;
+   
  }
  
 .minhaConta{
@@ -296,7 +301,7 @@ div.myAccount a img {
 }
 
 .page-nav{
-    background-image: url(/acme/images/site/rocketfeature.jpg);
+    /*background-image: url(/acme/images/site/rocketfeature.jpg);*/
     height: 480px;
     background-size:cover;
     background-repeat: no-repeat;
@@ -315,10 +320,16 @@ div.myAccount a img {
     margin-left: 20px;
     }
 
-.text1{
-    padding-top: 20%;
-    
-}
+.prodDisplay{
+   padding-top: 10%;
+   margin-left:-300px;
+   margin-top:-25px;
+   text-align: center;
+ }
+ 
+.feature{
+     padding-top: 100px;
+ }
 	
 .main h2{
     text-align: center;
@@ -334,6 +345,15 @@ div.box{
     width: 150px;
     display: grid;
    }
+   
+.box{
+ margin-left: 40px;      
+}
+   
+.gridItem{
+    text-align: center;
+    padding-bottom: 10px;
+}  
 	 
 #line {
     border-bottom: solid 2px #000;
